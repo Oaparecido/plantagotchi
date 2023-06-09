@@ -205,10 +205,24 @@ const Health = () => {
             </View>
             <View>
               <View style={styles.cardNutrients}>
-                <Text>
-                  <Text>amount of </Text>
-                  <Text>NUTRIENTS</Text>
+                <Text style={styles.txtInnerCardMargin}>
+                  <Text style={[styles.txtInnerCard]}>amount of </Text>
+                  <Text style={[styles.txtInnerCard, styles.txtBold]}>
+                    NUTRIENTS
+                  </Text>
                 </Text>
+                <View style={styles.alignInnerCardNutrients}>
+                  <Text
+                    style={[
+                      styles.txtInnerCard,
+                      styles.txtNumberCardNutrients,
+                      styles.txtBold,
+                    ]}>
+                    <Text>50</Text>
+                    <Text style={[styles.txtInnerCard, styles.txtBold]}>%</Text>
+                  </Text>
+                  <View style={styles.blockCardNutrients} />
+                </View>
               </View>
               <View style={styles.cardWatering}></View>
             </View>
@@ -332,6 +346,7 @@ const styles = StyleSheet.create({
   },
 
   cardSunExposure: {
+    marginTop: 20,
     width: 250,
     height: 120,
     backgroundColor: '#fff',
@@ -416,9 +431,32 @@ const styles = StyleSheet.create({
   },
 
   cardNutrients: {
+    marginTop: 30,
     width: 120,
     height: 150,
     backgroundColor: '#fff',
+    borderRadius: 5,
+  },
+
+  txtNumberCardNutrients: {
+    textAlign: 'left',
+    fontSize: 45,
+    marginTop: 60,
+    marginLeft: 5,
+  },
+
+  blockCardNutrients: {
+    width: 30,
+    height: 50,
+    marginBottom: 10,
+    marginLeft: 5,
+    backgroundColor: '#47C751',
+    borderRadius: 3,
+  },
+
+  alignInnerCardNutrients: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
   },
 });
 
