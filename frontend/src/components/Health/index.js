@@ -203,7 +203,7 @@ const Health = () => {
                 </View>
               </View>
             </View>
-            <View>
+            <View style={styles.alignNutrientsAndWatering}>
               <View style={styles.cardNutrients}>
                 <Text style={styles.txtInnerCardMargin}>
                   <Text style={[styles.txtInnerCard]}>amount of </Text>
@@ -224,7 +224,28 @@ const Health = () => {
                   <View style={styles.blockCardNutrients} />
                 </View>
               </View>
-              <View style={styles.cardWatering}></View>
+              <View style={styles.cardWatering}>
+                <Text style={[styles.txtInnerCardMargin]}>
+                  <Text style={styles.txtInnerCard}>next </Text>
+                  {'\n'}
+                  <Text style={[styles.txtInnerCard, styles.txtBold]}>
+                    WATERING
+                  </Text>
+                </Text>
+                <Text style={[styles.alignCenter, styles.txtInnerAlign]}>
+                  <Text>
+                    <Text style={[styles.txtInnerCard]}>in</Text>
+                    <Text
+                      style={[
+                        styles.txtInnerCard,
+                        styles.txtBold,
+                        styles.txtNumberCardWatering,
+                      ]}>
+                      10
+                    </Text>
+                  </Text>
+                </Text>
+              </View>
             </View>
           </View>
           <View style={styles.elementRight}>
@@ -457,6 +478,33 @@ const styles = StyleSheet.create({
   alignInnerCardNutrients: {
     flexDirection: 'row',
     alignItems: 'flex-end',
+  },
+
+  cardWatering: {
+    marginTop: 30,
+    width: 120,
+    height: 150,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    marginLeft: 10,
+  },
+
+  alignNutrientsAndWatering: {
+    flexDirection: 'row',
+  },
+
+  txtNumberCardWatering: {
+    fontSize: 90,
+  },
+
+  txtWatering: {
+    textAlign: 'right',
+    fontWeight: 'bold',
+    color: '#46593F',
+  },
+
+  flexDirectionColumn: {
+    flexDirection: 'column',
   },
 });
 
