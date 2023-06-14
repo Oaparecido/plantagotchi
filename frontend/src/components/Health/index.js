@@ -94,7 +94,7 @@ const Health = () => {
             />
           </View>
         </View>
-        <View>
+        <View style={styles.alignElements}>
           <View style={styles.elementsLeft}>
             <View style={styles.cardSunExposure}>
               <Text style={styles.txtInnerCardMargin}>
@@ -249,7 +249,21 @@ const Health = () => {
             </View>
           </View>
           <View style={styles.elementRight}>
-            <View style={styles.cardPhSoil}></View>
+            <View style={styles.cardPhSoil}>
+              <Text style={[styles.txtInnerCardMargin]}>
+                <Text style={styles.txtInnerCard}>ph </Text>
+                <Text style={[styles.txtInnerCard, styles.txtBold]}>SOIL</Text>
+              </Text>
+              <View style={styles.phSoilIndex}>
+                <Text style={styles.alignNumberFromPhInCenter}>
+                  <Text
+                    style={[styles.txtBold, styles.txtBigger, styles.txtWhite]}>
+                    9
+                  </Text>
+                  <Text style={[styles.txtBold, styles.txtWhite]}>,0</Text>
+                </Text>
+              </View>
+            </View>
           </View>
         </View>
       </View>
@@ -505,6 +519,35 @@ const styles = StyleSheet.create({
 
   flexDirectionColumn: {
     flexDirection: 'column',
+  },
+
+  phSoilIndex: {
+    width: 60,
+    height: 255,
+    backgroundColor: '#E83D3D',
+    margin: 10,
+    borderRadius: 5,
+  },
+
+  cardPhSoil: {
+    width: 80,
+    height: 300,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    marginTop: 30,
+    marginLeft: 20,
+  },
+
+  alignElements: {
+    flexDirection: 'row',
+  },
+
+  alignNumberFromPhInCenter: {
+    alignSelf: 'center',
+  },
+
+  txtWhite: {
+    color: '#fff',
   },
 });
 

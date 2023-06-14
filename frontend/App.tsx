@@ -7,10 +7,10 @@
 
 import React from 'react';
 
-import Pet from './src/components/Pet';
+import Health from './src/components/Health';
 
 function App(): JSX.Element {
-  return <Pet />;
+  return <Health />;
 }
 
 export default App;
