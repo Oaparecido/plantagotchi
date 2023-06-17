@@ -1,10 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
-const Home = ({navigation}) => {
+const Home = () => {
   const handlePress = () => {
     console.log('Pressed button!');
-    navigation.navigate('Register');
   };
 
   return (

@@ -7,10 +7,10 @@
 
 import React from 'react';
 
-import Health from './src/components/Health';
+import Navigation from './src/Navigation';
 
 function App(): JSX.Element {
-  return <Health />;
+  return <Navigation />;
 }
 
 export default App;
